@@ -33,7 +33,7 @@ class _ButtonState extends State<Button> {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return ElevatedButton(
       onPressed: () {
         setState(() {
           isSending = true;
@@ -57,9 +57,10 @@ class _ButtonState extends State<Button> {
             : Text(widget.request.request == RequestType.money
                 ? 'Send'
                 : 'Accept'),
+
+        color: Colors.green,
+        // textColor: Colors.white,
       ),
-      color: Colors.green,
-      textColor: Colors.white,
     );
   }
 }

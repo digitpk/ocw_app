@@ -34,7 +34,7 @@ class _DialogPostState extends State<DialogPost> {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            FlatButton(
+            ElevatedButton(
               child: Text(
                 'No',
                 style: TextStyle(color: Colors.blue),
@@ -43,7 +43,7 @@ class _DialogPostState extends State<DialogPost> {
                 Navigator.pop(context);
               },
             ),
-            FlatButton(
+            ElevatedButton(
               child: isDeleting
                   ? CircularProgressIndicator()
                   : Text(

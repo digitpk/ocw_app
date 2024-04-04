@@ -17,7 +17,7 @@ class _PinTypeState extends State<PinType> {
   List<String> pins = [];
   bool isUserTypeChanging = false;
   String pin = '';
-GlobalKey<FormState>key = GlobalKey<FormState>();
+  GlobalKey<FormState> key = GlobalKey<FormState>();
   TextEditingController textEditingController = TextEditingController();
   @override
   void initState() {
@@ -69,11 +69,13 @@ GlobalKey<FormState>key = GlobalKey<FormState>();
             ),
           ),
         ),
-        SizedBox(height: 10,),
+        SizedBox(
+          height: 10,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -84,13 +86,13 @@ GlobalKey<FormState>key = GlobalKey<FormState>();
                 ),
                 padding: EdgeInsets.all(5.0),
               ),
-              color: Colors.red,
-              padding: EdgeInsets.all(10),
+              // color: Colors.red,
+              // padding: EdgeInsets.all(10),
             ),
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 setState(() {
-                  isUserTypeChanging=true;
+                  isUserTypeChanging = true;
                 });
                 widget.createRequest(parentId: pins.toString());
               },
@@ -103,8 +105,8 @@ GlobalKey<FormState>key = GlobalKey<FormState>();
                       ),
                 padding: EdgeInsets.all(5.0),
               ),
-              color: Colors.green,
-              padding: EdgeInsets.all(10),
+              // color: Colors.green,
+              // padding: EdgeInsets.all(10),
             ),
           ],
         )

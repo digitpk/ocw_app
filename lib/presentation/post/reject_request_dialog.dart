@@ -60,15 +60,15 @@ class _RejectRequestState extends State<RejectRequest> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
               child: Text('Skip'),
-              color: Colors.white,
-              textColor: Colors.black,
+              // color: Colors.white,
+              // textColor: Colors.black,
             ),
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 setState(() {
                   isRejecting = true;
@@ -82,8 +82,8 @@ class _RejectRequestState extends State<RejectRequest> {
               },
               child:
                   isRejecting ? CircularProgressIndicator() : Icon(Icons.send),
-              color: Colors.white,
-              textColor: Colors.blue,
+              // color: Colors.white,
+              // textColor: Colors.blue,
             ),
           ],
         ),

@@ -50,7 +50,6 @@ class _RequestMoneyDialogState extends State<RequestMoneyDialog> {
                 icon: Icon(Icons.monetization_on),
                 labelText: "AMOUNT",
                 hintText: "0",
-
                 border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.red, width: 5.0),
                 )),
@@ -59,7 +58,7 @@ class _RequestMoneyDialogState extends State<RequestMoneyDialog> {
         ),
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: FlatButton(
+          child: ElevatedButton(
             onPressed: () {
               setState(() {
                 isRequesting = true;
@@ -69,7 +68,7 @@ class _RequestMoneyDialogState extends State<RequestMoneyDialog> {
             child: isRequesting
                 ? CircularProgressIndicator()
                 : Text('REQUSET MONEY'),
-            color: Colors.blue,
+            // color: Colors.blue,
           ),
         )
       ],

@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:ocw_app/models/request/request.dart';
 import 'package:ocw_app/models/request/request_type.dart';
 import 'package:ocw_app/models/transaction/transaction_status.dart';
@@ -5,9 +7,6 @@ import 'package:ocw_app/models/user/user_type.dart';
 import 'package:ocw_app/presentation/post/button.dart';
 import 'package:ocw_app/presentation/post/reject_request_dialog.dart';
 import 'package:ocw_app/utils/size_config.dart';
-import 'package:timeago/timeago.dart' as timeago;
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class AllRequests extends StatefulWidget {
   final List<Request> requests;
@@ -68,14 +67,16 @@ class _AllRequestsState extends State<AllRequests> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Container(
-                    width: SizeConfig.screenWidth * 0.1,
-                    child: Text(timeago.format(DateTime.parse(
-                            request.timestamp == null
-                                ? DateTime.now().toString()
-                                : request.timestamp)
-                        .toLocal())),
-                  ),
+                  Container(width: SizeConfig.screenWidth * 0.1, child: Text(
+                          // timeago.format(DateTime.parse(
+                          //     request.timestamp == null
+                          //         ? DateTime.now().toString()
+                          //         :
+                          request.timestamp)
+                      // .toLocal()
+                      ),
+                  // ),
+                  //           ),
                 ],
               ),
             ),
@@ -170,7 +171,7 @@ class _AllRequestsState extends State<AllRequests> {
                         ? Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              FlatButton(
+                              ElevatedButton(
                                 onPressed: () {
                                   showDialog(
                                       context: context,
@@ -186,8 +187,8 @@ class _AllRequestsState extends State<AllRequests> {
                                           ? 'Reject'
                                           : 'Cancel'),
                                 ),
-                                color: Colors.red,
-                                textColor: Colors.white,
+                                // color: Colors.red,
+                                // textColor: Colors.white,
                               ),
                               Button(request, widget.onActionPerform),
                             ],

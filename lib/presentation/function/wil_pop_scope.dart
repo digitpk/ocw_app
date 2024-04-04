@@ -10,13 +10,13 @@ class Exit extends StatelessWidget {
     return SimpleDialog(
       title: Text('Do you want to Quit?'),
       children: <Widget>[
-        FlatButton(
+        ElevatedButton(
           onPressed: () {
             onExit();
           },
           child: Text('Yes'),
         ),
-        FlatButton(
+        ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
           },

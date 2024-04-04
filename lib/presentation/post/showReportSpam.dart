@@ -90,7 +90,7 @@ class _ShowReportSpamState extends State<ShowReportSpam> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              FlatButton(
+              ElevatedButton(
                 child: Text(
                   'Close',
                   style: TextStyle(color: Colors.black),
@@ -99,7 +99,7 @@ class _ShowReportSpamState extends State<ShowReportSpam> {
                   Navigator.pop(context);
                 },
               ),
-              FlatButton(
+              ElevatedButton(
                 child: isReporting
                     ? CircularProgressIndicator()
                     : Text(

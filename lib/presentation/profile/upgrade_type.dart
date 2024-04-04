@@ -101,7 +101,7 @@ class _UpgradeTypeState extends State<UpgradeType> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -112,10 +112,10 @@ class _UpgradeTypeState extends State<UpgradeType> {
                 ),
                 padding: EdgeInsets.all(5.0),
               ),
-              color: Colors.red,
-              padding: EdgeInsets.all(10),
+              // color: Colors.red,
+              // padding: EdgeInsets.all(10),
             ),
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 setState(() {
                   isUserTypeChanging = true;
@@ -136,8 +136,8 @@ class _UpgradeTypeState extends State<UpgradeType> {
                       ),
                 padding: EdgeInsets.all(5.0),
               ),
-              color: Colors.green,
-              padding: EdgeInsets.all(10),
+              // color: Colors.green,
+              // padding: EdgeInsets.all(10),
             ),
           ],
         )

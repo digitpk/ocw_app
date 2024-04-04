@@ -95,7 +95,7 @@ class _SendMoneyDialogState extends State<SendMoneyDialog> {
           Padding(
             padding:
                 const EdgeInsets.only(top: 5, bottom: 5, right: 10, left: 10),
-            child: FlatButton(
+            child: ElevatedButton(
               onPressed: () {
                 _formKey.currentState.save();
                 if (_formKey.currentState.validate()) {
@@ -112,7 +112,7 @@ class _SendMoneyDialogState extends State<SendMoneyDialog> {
                           backgroundColor: Colors.white,
                         )
                       : Text('CONFIRM')),
-              color: Colors.blue,
+              // color: Colors.blue,
             ),
           )
         ],

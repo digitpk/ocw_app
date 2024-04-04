@@ -39,7 +39,7 @@ class _ViewPostDialogState extends State<ViewPostDialog> {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
@@ -48,7 +48,7 @@ class _ViewPostDialogState extends State<ViewPostDialog> {
                 style: TextStyle(color: Theme.of(context).errorColor),
               ),
             ),
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 setState(() {
                   isViewing = true;

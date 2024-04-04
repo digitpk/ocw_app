@@ -116,7 +116,7 @@ class _PostViewState extends State<PostView> {
                                         child: Text('Accept'),
                                       )
                                 : Container(
-                                    child: FlatButton(
+                                    child: ElevatedButton(
                                       onPressed: () {
                                         if (!widget.isViewed) {
                                           showDialog(

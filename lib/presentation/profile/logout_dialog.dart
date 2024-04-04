@@ -27,13 +27,13 @@ class _LogoutDialogState extends State<LogoutDialog> {
         Container(
           child: Row(
             children: <Widget>[
-              FlatButton(
+              ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
                 child: Text('No'),
               ),
-              FlatButton(
+              ElevatedButton(
                 child: isLoggingOut ? CircularProgressIndicator() : Text('Yes'),
                 onPressed: () {
                   setState(() {

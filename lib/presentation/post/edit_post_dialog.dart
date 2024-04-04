@@ -74,7 +74,7 @@ class _EditPostDialogState extends State<EditPostDialog> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
@@ -85,7 +85,7 @@ class _EditPostDialogState extends State<EditPostDialog> {
                       ),
                     ),
                   ),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () {
                       if (textEditingController.text.trim().isEmpty) {
                         Navigator.pop(context);
